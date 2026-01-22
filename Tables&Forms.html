@@ -1,0 +1,86 @@
+<!-- Pizza Form Assignment -->
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <title> Pizza Delivery Form </title>
+    </head>
+
+    <body>
+        <h1>Pizza Delivery Form</h1>
+        <form>
+        <h2>Contact Information</h2>
+                <label for="inName">Name</label>
+                <input type="text" name="Name" id="inName" required><br>
+
+                <label for="inEmail">Phone</label>
+                <input type="text" name="Phone" id="inPhone" pattern="[0-9]{10}"><br>
+
+                <label for="inEmail">Email</label>
+                <input type="email" name="Email" id="inEmail" required><br>
+
+        <h2>Select Pizza Size</h2> 
+            <label for="inSize">Pizza Size</label>
+            <select name="PizzaSize" id="inSize" required>
+                <option value="" disabled selected>-Select Size-</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="XLarge">XLarge</option>
+            </select>
+
+        <h2>Select Sauce</h2>
+            <input type="radio" name="sauceytime" required><label>Marinara</label><br>
+            <input type="radio" name="sauceytime"><label>Ranch</label><br>
+            <input type="radio" name="sauceytime"><label>No Sauce</label><br>
+
+        <h2>Select Toppings</h2>
+            <input type="checkbox"><label>Pepperoni</label>
+            <input type="checkbox"><label>Sausage</label><br>
+            <input type="checkbox"><label>Ham</label>
+            <input type="checkbox"><label>Pineapple</label><br>
+            <input type="checkbox"><label>Onion</label>
+            <input type="checkbox"><label>Pepper</label><br>
+    
+        <h2>Additional Instructions</h2>
+        <textarea name="comments">Add Instructions</textarea><br>
+        
+        <input type="submit" value="Submit">
+        </form>
+
+    <h3>List of My Favorite Video games</h3>
+    <table border="1">
+        <tr>
+            <th>Developer</th>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td rowspan="2">EA</td>
+            <td>The Sims 4</td>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <td>It Takes Two</td>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <td>Mojang</td>
+            <td>Minecraft</td>
+            <td>2011</td>
+        </tr>
+        <tr>
+            <td>Unknown Worlds</td>
+            <td>Subnautica</td>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <td colspan="3">Count: 4</td>
+        </tr>
+    </table>
+
+
+    </body>
+
+</html>
+
+
+
