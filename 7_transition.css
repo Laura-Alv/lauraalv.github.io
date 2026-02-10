@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    background-color: white;
+    align-items: stretch;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    flex: 1;
+    min-width: 0;
+    background: white;
+}
+
+/* Left nav */
+#menuItems{
+    width: 250px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+}
+
+#menuItems button{
+    appearance: none;
+    border: 0;
+    width: 100%;
+    background-color: #7CAADC;
+    color: black;
+    padding: 18px 12px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 2px solid #000;
+    transition: background-color 200ms ease-in-out;
+}
+
+#menuItems button:hover{
+    background: #124dff;
+}
+
+#jumpMenu{
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    background: #FFD372;  
+    display: none;
+}
+
+#jumpMenu li{
+    margin: 0;
+    padding: 0;
+}
+
+#jumpMenu a{
+    display: block;
+    text-align: center;
+    padding: 2px 14px;
+    color: #0b3dd9;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 1.1;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+/* list stays open while hovering the list */
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+    display: block;
+}
+
+/* Hover styling for links inside the dropdown list */
+#jumpMenu a:hover{
+    background: #0b3dd9;
+    color: #fff;
+}
+
+/* MyBlog header */
+header p{
+    margin: 0;
+    width: 100%;
+    background: #114AB1;
+    color: white;
+    text-align: center;
+    padding: 48px 0;
+    font-size: 44px;
+    font-weight: 500;
+}
+
+/* Page title */
+h1{
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 48px;
+    margin: 34px 0 20px;
+    font-weight: 700;
+}
+
+/* Articles */
+#container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+    gap: 56px;
+    justify-content: center;
+    align-items: start;
+    padding: 10px 24px 80px;
+}
+
+article{
+    width: 300px;
+    color: #bcbcbc; 
+    transition: transform 2s ease, color 2s ease;
+    transform-origin: top center;
+}
+
+article:hover{
+    color: #111; 
+    transform: scale(1.15); /* expands on hover */
+    z-index: 2;
+}
+
+article h2{
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+article p{
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.35;
+    color: inherit; 
+}
+
+/* First letter of the main article text only (Read more... unaffected) */
+article > p:first-of-type::first-letter{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+    line-height: 1;
+    float: left;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+
+/* Add arrow image to the right of Google links (Read more...) */
+a[href*="google.com"]::after{
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-left: 8px;
+    vertical-align: text-bottom;
+    background: url("arrowarrow.png");
+}
+
+#thanks{
+    position: fixed;
+    padding: 14px 18px;
+    background-color: #2C3D73;
+    color: white;
+    right: 16px;
+    bottom: 16px;
+}
+
+#thanks a{
+    color: #fff;
+}
